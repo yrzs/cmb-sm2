@@ -1,0 +1,29 @@
+syntax = "proto3";
+package cmbsm2;
+option go_package = "cmbsm2/api;api";
+option java_multiple_files = true;
+option java_package = "api.api";
+
+service CmbSm2{
+  rpc GetSign(SignReq) returns (SignRep){}
+  rpc VerifySign (VerifyReq) returns (VerifyRep){}
+}
+
+message SignReq{
+  string src = 1;
+}
+
+message SignRep{
+  int64 code = 1;
+  string message = 2;
+  string sign = 3;
+}
+message VerifyReq{
+  string src = 1;
+  string sign = 2;
+}
+message VerifyRep{
+  int64 code = 1;
+  string message = 2;
+  bool verify =3;
+}
