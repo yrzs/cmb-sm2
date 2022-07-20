@@ -2,7 +2,7 @@ GOPATH:=$(shell go env GOPATH)
 API_PROTO_FILES=$(shell find api -name *.proto)
 OUTPUT_PYTHON =$(shell rm -fr ./scripts/output/python/*)./scripts/output/python
 OUTPUT_PHP =$(shell rm -fr ./scripts/output/php/*)./scripts/output/php
-VERSION = xc/achi-rank:v1
+VERSION = cmbsm2:v1
 
 .PHONY: test
 test:
